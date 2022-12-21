@@ -80,7 +80,7 @@ class OnboardContent extends StatelessWidget {
     return Stack(
       children: [
         Image.asset(
-          "assets/image/onboard.jpeg",
+          backImage,
           fit: BoxFit.cover,
           alignment: AlignmentDirectional.topStart,
         ),
@@ -93,9 +93,8 @@ class OnboardContent extends StatelessWidget {
             children: [
               Stack(children: [
                 Align(
-                  // alignment: Alignment.topRight,
                   child: Image.asset(
-                    'assets/image/1.png',
+                    image,
                     fit: BoxFit.fill,
                   ),
                 ),

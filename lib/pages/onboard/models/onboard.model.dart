@@ -12,20 +12,20 @@ class Onboard {
 
 List<Onboard> onboardScreen = [
   Onboard(
-    backImage: "assets/image/onboard_back1.svg",
-    image: "assets/image/onboard1.svg",
+    backImage: "assets/image/onboard_back1.jpeg",
+    image: "assets/image/1.png",
     title: AppStrings.onBoardingTitle1,
     description: AppStrings.onBoardingSubTitle1,
   ),
   Onboard(
-    backImage: "assets/image/onboard_back1.svg",
-    image: "assets/image/onboard2.svg",
+    backImage: "assets/image/onboard_back2.jpeg",
+    image: "assets/image/2.png",
     title: AppStrings.onBoardingTitle2,
     description: AppStrings.onBoardingSubTitle2,
   ),
   Onboard(
-    backImage: "assets/image/onboard_back1.svg",
-    image: "assets/image/onboard3.svg",
+    backImage: "assets/image/onboard_back3.jpeg",
+    image: "assets/image/3.png",
     title: AppStrings.onBoardingTitle3,
     description: AppStrings.onBoardingSubTitle3,
   )
