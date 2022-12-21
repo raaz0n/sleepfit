@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:sleepfit/common/color.manager.dart';
+import 'package:sleepfit/common/font.manager.dart';
 import 'package:sleepfit/pages/onboard/onboard.screen.dart';
 import 'package:sleepfit/widgets/default.button.dart';
 
@@ -21,19 +23,20 @@ class SplashScreen extends StatelessWidget {
               height: 14,
             ),
             RichText(
-              text: const TextSpan(
+              text: TextSpan(
                   text: 'Sleep',
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 24,
+                  style: const TextStyle(
+                      color: Color.fromRGBO(0, 0, 0, 1),
+                      fontSize: FontSize.s24,
                       fontWeight: FontWeight.bold),
                   children: [
                     TextSpan(
                       text: 'Fit',
                       style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold),
+                        color: ColorManager.titleText,
+                        fontSize: FontSize.s24,
+                        fontWeight: FontWeight.bold,
+                      ),
                     )
                   ]),
             ),

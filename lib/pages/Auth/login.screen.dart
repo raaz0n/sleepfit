@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sleepfit/common/color.manager.dart';
 import 'package:sleepfit/common/string.manager.dart';
 import 'package:sleepfit/common/value.manager.dart';
+import 'package:sleepfit/main.page.dart';
 import 'package:sleepfit/pages/Auth/forget.screen.dart';
 import 'package:sleepfit/pages/Auth/register.screen.dart';
 import 'package:sleepfit/widgets/default.button.dart';
@@ -84,7 +85,17 @@ class LoginScreen extends StatelessWidget {
                     const SizedBox(
                       height: AppSize.s40,
                     ),
-                    const DefaultButton(text: "Login")
+                    DefaultButton(
+                      text: "Login",
+                      press: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const MainPageScreen(),
+                          ),
+                        );
+                      },
+                    )
                   ],
                 ),
               ),
