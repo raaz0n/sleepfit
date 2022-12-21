@@ -11,4 +11,6 @@ class AppStrings {
   static const String onBoardingSubTitle3 =
       "Improve the quality of your sleep with us,good quality sleep can bring a good mood in the morning";
   static const String skip = "Skip";
+  static const String googleSigning = "Sign in with Google";
+  static const String appleSigning = "Sign in with Google";
 }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:sleepfit/common/color.manager.dart';
 import 'package:sleepfit/common/value.manager.dart';
+import 'package:sleepfit/pages/Auth/login.screen.dart';
 
 import '../../common/string.manager.dart';
 import '../../widgets/large.text.widget.dart';
@@ -102,7 +104,7 @@ class OnboardContent extends StatelessWidget {
                 width: AppSize.s300,
                 child: AppLargeText(
                   text: title,
-                  color: const Color(0xff5D5FEF),
+                  color: ColorManager.titleText,
                 ),
               ),
               const SizedBox(
@@ -112,7 +114,7 @@ class OnboardContent extends StatelessWidget {
                 width: AppSize.s300,
                 child: AppSmallText(
                   text: description,
-                  color: const Color(0xff01041D),
+                  color: ColorManager.subTitle,
                 ),
               ),
               const SizedBox(
@@ -141,7 +143,16 @@ class OnboardContent extends StatelessWidget {
               const SizedBox(
                 height: AppSize.s40,
               ),
-              AppSmallText(text: AppStrings.skip)
+              GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LoginScreen(),
+                      ),
+                    );
+                  },
+                  child: AppSmallText(text: AppStrings.skip))
             ],
           ),
         ),
