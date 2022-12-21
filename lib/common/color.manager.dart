@@ -4,6 +4,7 @@ class ColorManager {
   static Color primary = HexColor.fromHex("#ED9728");
   static Color titleText = HexColor.fromHex("#5D5FEF");
   static Color subTitle = HexColor.fromHex("#01041D");
+  static Color white = HexColor.fromHex("#FFFFFF");
 }
 
 extension HexColor on Color {
