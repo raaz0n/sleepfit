@@ -13,4 +13,5 @@ class AppStrings {
   static const String skip = "Skip";
   static const String googleSigning = "Sign in with Google";
   static const String appleSigning = "Sign in with Google";
+  static const String musicName = "Deep Sleep Music";
 }
