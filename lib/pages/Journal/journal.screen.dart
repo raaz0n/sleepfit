@@ -3,6 +3,7 @@ import 'package:sleepfit/common/value.manager.dart';
 import 'package:sleepfit/pages/Journal/widgets/date.picker.widget.dart';
 import 'package:sleepfit/pages/Journal/widgets/grid.item.widget.dart';
 import 'package:sleepfit/widgets/large.text.widget.dart';
+import 'package:sleepfit/widgets/line.chart.widget.dart';
 
 import 'widgets/share.widget.dart';
 
@@ -21,14 +22,11 @@ class JournalScreen extends StatelessWidget {
             AppLargeText(text: "Your Sleep Calendar "),
             const DatePickerWidget(),
             const SizedBox(
-              height: AppSize.s40,
+              height: AppSize.s24,
             ),
             const SharedWidget(),
             const SizedBox(
-              height: AppSize.s40,
-            ),
-            const SizedBox(
-              height: AppSize.s165,
+              child: LineChartWidget(),
             ),
             const GridItemWidget(),
           ],
