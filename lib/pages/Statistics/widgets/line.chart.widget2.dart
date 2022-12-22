@@ -146,9 +146,9 @@ class _LineChartWidget2State extends State<LineChartWidget2> {
       borderData: FlBorderData(
         border: Border.all(color: const Color(0x0fffffff)),
       ),
-      minX: 1,
+      minX: 0,
       maxX: 13,
-      minY: 1,
+      minY: 0,
       maxY: 6,
       lineBarsData: [
         LineChartBarData(

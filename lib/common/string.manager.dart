@@ -23,4 +23,5 @@ class AppStrings {
   static const String wentToBed = "Went to bed";
   static const String wokeUp = "Woke up";
   static const String timeInBed = "Time in bed";
+  static const String profile = "Profile";
 }

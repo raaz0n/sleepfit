@@ -5,6 +5,7 @@ class ColorManager {
   static Color titleText = HexColor.fromHex("#5D5FEF");
   static Color subTitle = HexColor.fromHex("#01041D");
   static Color white = HexColor.fromHex("#FFFFFF");
+  static Color unTabColor = HexColor.fromHex("#A5A6F6");
 }
 
 extension HexColor on Color {

@@ -3,7 +3,7 @@ import 'package:sleepfit/common/color.manager.dart';
 import 'package:sleepfit/common/font.manager.dart';
 import 'package:sleepfit/common/string.manager.dart';
 import 'package:sleepfit/pages/Statistics/widgets/heading.widget.dart';
-import 'package:sleepfit/widgets/line.chart.widget.dart';
+import 'package:sleepfit/pages/Statistics/widgets/topTabBar.widget.dart';
 
 import '../../common/value.manager.dart';
 import 'widgets/bar.chart.widget.dart';
@@ -37,15 +37,40 @@ class StatisticsScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
+                TopTabBarWidget(),
+                SizedBox(
+                  height: AppSize.s40,
+                ),
                 HeadingWidget(title: AppStrings.sleepQuality),
+                SizedBox(
+                  height: AppSize.s16,
+                ),
                 BarChartSample(),
+                SizedBox(
+                  height: AppSize.s40,
+                ),
                 HeadingWidget(title: AppStrings.regularity),
-                LineChartWidget2(),
-                HeadingWidget(title: AppStrings.wentToBed),
+                SizedBox(
+                  height: AppSize.s16,
+                ),
                 BarChartSample2(),
+                SizedBox(
+                  height: AppSize.s40,
+                ),
+                HeadingWidget(title: AppStrings.wentToBed),
+                LineChartWidget2(),
+                SizedBox(
+                  height: AppSize.s40,
+                ),
                 HeadingWidget(title: AppStrings.wokeUp),
-                LineChartWidget(),
+                LineChartWidget2(),
+                SizedBox(
+                  height: AppSize.s40,
+                ),
                 HeadingWidget(title: AppStrings.timeInBed),
+                SizedBox(
+                  height: AppSize.s16,
+                ),
                 BarChartSample(),
               ],
             ),
