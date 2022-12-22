@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
 
 class DefaultButton extends StatelessWidget {
-  const DefaultButton({
-    Key? key,
-    required this.text,
-    this.press,
-  }) : super(key: key);
+  const DefaultButton(
+      {Key? key,
+      required this.text,
+      this.press,
+      this.height = 56,
+      this.width = 315})
+      : super(key: key);
   final String text;
   final VoidCallback? press;
+  final double height, width;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: press,
       child: Container(
-        width: 315,
-        height: 56,
+        width: width,
+        height: height,
         decoration: BoxDecoration(
             gradient: const LinearGradient(
               begin: Alignment.centerRight,

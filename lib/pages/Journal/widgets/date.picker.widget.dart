@@ -29,12 +29,13 @@ class _DatePickerWidgetState extends State<DatePickerWidget> {
         children: [
           DatePicker(
             DateTime.now(),
-            width: 60,
-            height: 80,
+            width: 65,
+            height: 92,
             controller: _controller,
             initialSelectedDate: DateTime.now(),
             selectionColor: ColorManager.titleText,
             selectedTextColor: Colors.white,
+            dateTextStyle: const TextStyle(fontSize: 18),
             onDateChange: (date) {
               setState(
                 () {

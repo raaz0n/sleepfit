@@ -17,7 +17,7 @@ class MusicScreen extends StatelessWidget {
             children: const [
               TopMusicWidget(),
               SizedBox(
-                height: 20,
+                height: AppSize.s14,
               ),
               TabBarWidget(),
             ],

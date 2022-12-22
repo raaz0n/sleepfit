@@ -42,7 +42,7 @@ class TextFormFieldWidget extends StatelessWidget {
         border: InputBorder.none,
         label: Text(labelText),
         filled: true,
-        fillColor: const Color(0xffF7F8F8),
+        fillColor: const Color.fromARGB(255, 245, 248, 248),
         prefixIcon: Padding(
           padding: const EdgeInsets.all(8),
           child: FaIcon(

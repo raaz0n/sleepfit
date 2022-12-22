@@ -14,4 +14,5 @@ class AppStrings {
   static const String googleSigning = "Sign in with Google";
   static const String appleSigning = "Sign in with Google";
   static const String musicName = "Deep Sleep Music";
+  static const String createAccount = "Create an account";
 }

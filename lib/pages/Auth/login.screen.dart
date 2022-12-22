@@ -88,7 +88,7 @@ class LoginScreen extends StatelessWidget {
                     DefaultButton(
                       text: "Login",
                       press: () {
-                        Navigator.push(
+                        Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
                             builder: (context) => const MainPageScreen(),

@@ -117,7 +117,7 @@ class OnboardContent extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: AppSize.s83,
+                height: AppSize.s28,
               ),
               Row(
                 mainAxisSize: MainAxisSize.min,
@@ -140,18 +140,22 @@ class OnboardContent extends StatelessWidget {
                 ],
               ),
               const SizedBox(
-                height: AppSize.s40,
+                height: AppSize.s45,
               ),
               GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => LoginScreen(),
-                      ),
-                    );
-                  },
-                  child: AppSmallText(text: AppStrings.skip))
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => LoginScreen(),
+                    ),
+                  );
+                },
+                child: AppSmallText(
+                  text: AppStrings.skip,
+                  color: ColorManager.subTitle,
+                ),
+              )
             ],
           ),
         ),

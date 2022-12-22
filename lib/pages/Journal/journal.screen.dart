@@ -28,7 +28,7 @@ class JournalScreen extends StatelessWidget {
               height: AppSize.s40,
             ),
             const SizedBox(
-              height: AppSize.s200,
+              height: AppSize.s165,
             ),
             const GridItemWidget(),
           ],

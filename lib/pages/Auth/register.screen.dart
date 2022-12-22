@@ -2,7 +2,9 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sleepfit/common/color.manager.dart';
+import 'package:sleepfit/common/string.manager.dart';
 import 'package:sleepfit/common/value.manager.dart';
+import 'package:sleepfit/pages/Auth/login.screen.dart';
 import 'package:sleepfit/widgets/default.button.dart';
 import 'package:sleepfit/widgets/large.text.widget.dart';
 import 'package:sleepfit/widgets/textformfield.widget.dart';
@@ -29,7 +31,7 @@ class RegisterScreen extends StatelessWidget {
                 height: AppSize.s60,
               ),
               AppLargeText(
-                text: "Register",
+                text: AppStrings.createAccount,
                 color: ColorManager.titleText,
               ),
               const SizedBox(
@@ -41,7 +43,7 @@ class RegisterScreen extends StatelessWidget {
                   children: [
                     TextFormFieldWidget(
                       textEditingController: usernameController,
-                      labelText: "UserName",
+                      labelText: "Username",
                       iconData: FontAwesomeIcons.user,
                       textInputType: TextInputType.name,
                       isEmail: true,
@@ -92,19 +94,25 @@ class RegisterScreen extends StatelessWidget {
               ),
               RichText(
                 text: TextSpan(
-                    text: 'Already have an account?',
-                    style: const TextStyle(color: Colors.black, fontSize: 18),
-                    children: [
-                      TextSpan(
-                        text: ' Login',
-                        style: TextStyle(
-                            color: ColorManager.titleText, fontSize: 18),
-                        recognizer: TapGestureRecognizer()
-                          ..onTap = () {
-                            // navigate to desired screen
-                          },
-                      )
-                    ]),
+                  text: 'Already have an account?',
+                  style: const TextStyle(color: Colors.black, fontSize: 18),
+                  children: [
+                    TextSpan(
+                      text: 'Login',
+                      style: TextStyle(
+                          color: ColorManager.titleText, fontSize: 18),
+                      recognizer: TapGestureRecognizer()
+                        ..onTap = () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => LoginScreen(),
+                            ),
+                          );
+                        },
+                    )
+                  ],
+                ),
               ),
             ],
           ),
