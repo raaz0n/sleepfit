@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sleepfit/pages/music/widgets/tabbar.widget.dart';
 
 import '../../common/value.manager.dart';
+import 'widgets/tabbar.widget.dart';
 import 'widgets/top.music.widget.dart';
 
 class MusicScreen extends StatelessWidget {
@@ -13,7 +13,7 @@ class MusicScreen extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: AppSize.s20),
-          child: Column(
+          child: ListView(
             children: const [
               TopMusicWidget(),
               SizedBox(
