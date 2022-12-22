@@ -86,16 +86,21 @@ class _HomeScreenState extends State<HomeScreen> {
                       const SizedBox(
                         height: AppSize.s50,
                       ),
-                      _selectedIndex != 1
+                      _selectedIndex == 0
                           ? AppSmallText(
                               text: "Wake up easy between \n12:00 - 12:30 AM",
                               color: ColorManager.subTitle,
                             )
-                          : AppSmallText(
-                              text:
-                                  "No wakeup window. \nAlarm will go off ay 12:30 AM",
-                              color: ColorManager.subTitle,
-                            ),
+                          : _selectedIndex == 1
+                              ? AppSmallText(
+                                  text:
+                                      "No wakeup window. \nAlarm will go off ay 12:30 AM",
+                                  color: ColorManager.subTitle,
+                                )
+                              : AppSmallText(
+                                  text: "No alarm \nOnly sleep analyzed",
+                                  color: ColorManager.subTitle,
+                                ),
                       const SizedBox(
                         height: AppSize.s14,
                       ),

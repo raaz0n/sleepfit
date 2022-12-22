@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sleepfit/common/color.manager.dart';
 import 'package:sleepfit/pages/Splash/splash.screen.dart';
 
 void main() {
@@ -14,9 +15,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        fontFamily: "Poppins",
-      ),
+          primarySwatch: Colors.blue,
+          fontFamily: "Poppins",
+          scaffoldBackgroundColor: ColorManager.white),
       home: const SplashScreen(),
     );
   }

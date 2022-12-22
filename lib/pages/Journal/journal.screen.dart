@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sleepfit/common/string.manager.dart';
 import 'package:sleepfit/common/value.manager.dart';
 import 'package:sleepfit/pages/Journal/widgets/date.picker.widget.dart';
 import 'package:sleepfit/pages/Journal/widgets/grid.item.widget.dart';
@@ -19,7 +20,7 @@ class JournalScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            AppLargeText(text: "Your Sleep Calendar "),
+            AppLargeText(text: AppStrings.sleepCalendar),
             const DatePickerWidget(),
             const SizedBox(
               height: AppSize.s24,

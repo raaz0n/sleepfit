@@ -21,14 +21,14 @@ class GridItemWidget extends StatelessWidget {
             crossAxisCount: 2,
             childAspectRatio: 30 / 10,
             // mainAxisSpacing: 2,
-            // crossAxisSpacing: 2,
+            crossAxisSpacing: 20,
           ),
           itemBuilder: (BuildContext context, int index) {
             return Row(
               children: [
                 Container(
-                  height: AppSize.s50,
-                  width: AppSize.s50,
+                  height: AppSize.s40,
+                  width: AppSize.s40,
                   decoration: BoxDecoration(
                     color: const Color(0xffA5A6F6).withOpacity(0.5),
                     borderRadius: BorderRadius.circular(AppSize.s14),
@@ -40,7 +40,7 @@ class GridItemWidget extends StatelessWidget {
                   )),
                 ),
                 const SizedBox(
-                  width: 13,
+                  width: AppSize.s16,
                 ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -49,7 +49,7 @@ class GridItemWidget extends StatelessWidget {
                     AppSmallText(
                       text: feature[index].title,
                       color: ColorManager.subTitle,
-                      size: FontSize.s16,
+                      size: FontSize.s12,
                     ),
                     const SizedBox(
                       height: 2,
@@ -57,7 +57,7 @@ class GridItemWidget extends StatelessWidget {
                     AppSmallText(
                       text: feature[index].subTitle,
                       color: ColorManager.titleText,
-                      size: FontSize.s16,
+                      size: FontSize.s12,
                     ),
                   ],
                 )

@@ -15,4 +15,12 @@ class AppStrings {
   static const String appleSigning = "Sign in with Google";
   static const String musicName = "Deep Sleep Music";
   static const String createAccount = "Create an account";
+  static const String sleepCalendar = "Your Sleep Calendar ";
+  static const String statistics = "Statistics";
+  static const String sleepQuality = "Sleep quality";
+  static const String more = "More";
+  static const String regularity = "Regularity";
+  static const String wentToBed = "Went to bed";
+  static const String wokeUp = "Woke up";
+  static const String timeInBed = "Time in bed";
 }
