@@ -18,23 +18,26 @@ class MusicWidget extends StatelessWidget {
         Hero(
           transitionOnUserGestures: true,
           tag: "musicTag",
-          child: Container(
-            height: AppSize.s100,
-            width: AppSize.s390,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(AppSize.s28),
-              image: const DecorationImage(
-                  image: AssetImage(
-                    "assets/image/music_backgound.jpeg",
-                  ),
-                  fit: BoxFit.cover),
+          child: Opacity(
+            opacity: 0.8,
+            child: Container(
+              height: AppSize.s100,
+              width: AppSize.s390,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(AppSize.s24),
+                image: const DecorationImage(
+                    image: AssetImage(
+                      "assets/image/music_backgound.jpeg",
+                    ),
+                    fit: BoxFit.fill),
+              ),
             ),
           ),
         ),
         Padding(
-          padding: const EdgeInsets.all(15.0),
+          padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sleepfit/common/string.manager.dart';
 
 class FeatureItemModel {
   String title;
@@ -12,7 +13,7 @@ class FeatureItemModel {
 List<FeatureItemModel> feature = [
   FeatureItemModel(
     icon: Icons.pie_chart,
-    title: 'Regularity',
+    title: AppStrings.regularity,
     subTitle: "97%",
   ),
   FeatureItemModel(
@@ -22,17 +23,17 @@ List<FeatureItemModel> feature = [
   ),
   FeatureItemModel(
     icon: Icons.bedtime,
-    title: 'Went to bed',
+    title: AppStrings.wentToBed,
     subTitle: "4:02 AM",
   ),
   FeatureItemModel(
     icon: Icons.access_alarm,
-    title: 'Woke up',
+    title: AppStrings.wokeUp,
     subTitle: "1:15 min",
   ),
   FeatureItemModel(
     icon: Icons.hotel,
-    title: 'Went to bed',
+    title: AppStrings.wentToBed,
     subTitle: "4:02 AM",
   ),
   FeatureItemModel(

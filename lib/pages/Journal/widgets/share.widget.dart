@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:sleepfit/common/color.manager.dart';
 import 'package:sleepfit/common/font.manager.dart';
+import 'package:sleepfit/common/string.manager.dart';
 import 'package:sleepfit/common/value.manager.dart';
 
 import '../../../widgets/small.text.widget.dart';
@@ -21,12 +22,12 @@ class SharedWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           CircularPercentIndicator(
-            radius: 55.0,
+            radius: AppSize.s50,
             lineWidth: 4.0,
             percent: 0.75,
             center: AppSmallText(
               text: "75%",
-              size: 20,
+              size: FontSize.s20,
               color: ColorManager.white,
             ),
             progressColor: ColorManager.white,
@@ -35,7 +36,7 @@ class SharedWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               AppSmallText(
-                text: "Bed time",
+                text: AppStrings.bedTime,
                 color: ColorManager.white,
                 size: FontSize.s14,
               ),

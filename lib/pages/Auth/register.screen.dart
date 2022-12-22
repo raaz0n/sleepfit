@@ -46,7 +46,6 @@ class RegisterScreen extends StatelessWidget {
                       labelText: "Username",
                       iconData: FontAwesomeIcons.user,
                       textInputType: TextInputType.name,
-                      isEmail: true,
                       errorMessage: "Username Required",
                     ),
                     const SizedBox(
@@ -58,12 +57,13 @@ class RegisterScreen extends StatelessWidget {
                       iconData: FontAwesomeIcons.envelope,
                       textInputType: TextInputType.emailAddress,
                       isEmail: true,
-                      errorMessage: "Email Required",
+                      errorMessage: AppStrings.emailRequired,
                     ),
                     const SizedBox(
                       height: 20,
                     ),
                     TextFormFieldWidget(
+                      isPassWord: true,
                       textEditingController: passwordController,
                       labelText: "Password",
                       iconData: FontAwesomeIcons.lock,
@@ -75,11 +75,11 @@ class RegisterScreen extends StatelessWidget {
                       height: 20,
                     ),
                     TextFormFieldWidget(
+                      isPassWord: true,
                       textEditingController: confirmPasswordController,
                       labelText: "Retype password",
                       iconData: FontAwesomeIcons.lock,
                       textInputType: TextInputType.visiblePassword,
-                      isEmail: true,
                       errorMessage: "errorMessage",
                     ),
                     const SizedBox(

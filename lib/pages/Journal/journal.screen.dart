@@ -3,7 +3,7 @@ import 'package:sleepfit/common/string.manager.dart';
 import 'package:sleepfit/common/value.manager.dart';
 import 'package:sleepfit/pages/Journal/widgets/date.picker.widget.dart';
 import 'package:sleepfit/pages/Journal/widgets/grid.item.widget.dart';
-import 'package:sleepfit/widgets/line.chart.widget.dart';
+import 'package:sleepfit/pages/Journal/widgets/line.chart.widget.dart';
 
 import '../../common/color.manager.dart';
 import '../../common/font.manager.dart';

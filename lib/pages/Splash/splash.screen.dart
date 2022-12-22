@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sleepfit/common/color.manager.dart';
 import 'package:sleepfit/common/font.manager.dart';
+import 'package:sleepfit/common/string.manager.dart';
+import 'package:sleepfit/common/value.manager.dart';
 import 'package:sleepfit/pages/onboard/onboard.screen.dart';
 import 'package:sleepfit/widgets/default.button.dart';
 
@@ -41,10 +43,10 @@ class SplashScreen extends StatelessWidget {
                   ]),
             ),
             const SizedBox(
-              height: 345,
+              height: AppSize.s300,
             ),
             DefaultButton(
-              text: "Get Started",
+              text: AppStrings.getStarted,
               press: () {
                 Navigator.push(
                   context,

@@ -20,7 +20,6 @@ class GridItemWidget extends StatelessWidget {
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             childAspectRatio: 30 / 10,
-            // mainAxisSpacing: 2,
             crossAxisSpacing: 20,
           ),
           itemBuilder: (BuildContext context, int index) {

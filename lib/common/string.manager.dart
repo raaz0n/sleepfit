@@ -1,4 +1,5 @@
 class AppStrings {
+  static const String getStarted = "Get Started";
   static const String onBoardingTitle1 =
       "Get notifications when you need to sleep";
   static const String onBoardingTitle2 = "Your sleep makes you stronger";
@@ -13,8 +14,11 @@ class AppStrings {
   static const String skip = "Skip";
   static const String googleSigning = "Sign in with Google";
   static const String appleSigning = "Sign in with Google";
+  static const String sendResetMail = "Send Reset Mail";
   static const String musicName = "Deep Sleep Music";
   static const String createAccount = "Create an account";
+  static const String emailRequired = "Email Required";
+
   static const String sleepCalendar = "Your Sleep Calendar ";
   static const String statistics = "Statistics";
   static const String sleepQuality = "Sleep quality";
@@ -24,4 +28,5 @@ class AppStrings {
   static const String wokeUp = "Woke up";
   static const String timeInBed = "Time in bed";
   static const String profile = "Profile";
+  static const String bedTime = "Bed time";
 }

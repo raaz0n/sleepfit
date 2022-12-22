@@ -72,6 +72,9 @@ class StatisticsScreen extends StatelessWidget {
                   height: AppSize.s16,
                 ),
                 BarChartSample(),
+                SizedBox(
+                  height: AppSize.s30,
+                ),
               ],
             ),
           ),

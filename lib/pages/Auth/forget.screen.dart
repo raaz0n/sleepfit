@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sleepfit/common/color.manager.dart';
+import 'package:sleepfit/common/string.manager.dart';
 import 'package:sleepfit/common/value.manager.dart';
 import 'package:sleepfit/widgets/default.button.dart';
 import 'package:sleepfit/widgets/large.text.widget.dart';
@@ -41,12 +42,12 @@ class ForgetScreen extends StatelessWidget {
                       iconData: FontAwesomeIcons.envelope,
                       textInputType: TextInputType.emailAddress,
                       isEmail: true,
-                      errorMessage: "Email Required",
+                      errorMessage: AppStrings.emailRequired,
                     ),
                     const SizedBox(
                       height: AppSize.s65,
                     ),
-                    const DefaultButton(text: "Send Reset Mail")
+                    const DefaultButton(text: AppStrings.sendResetMail)
                   ],
                 ),
               ),

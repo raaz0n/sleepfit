@@ -62,10 +62,11 @@ class _HomeScreenState extends State<HomeScreen> {
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
                                   border: Border.all(
-                                      color: ColorManager.titleText)),
+                                      color: const Color(0xffDDDADA))),
                               child: TimePickerSpinner(
                                 is24HourMode: false,
                                 normalTextStyle: TextStyle(
+                                    fontWeight: FontWeight.bold,
                                     fontSize: 24,
                                     color: ColorManager.titleText),
                                 highlightedTextStyle: TextStyle(

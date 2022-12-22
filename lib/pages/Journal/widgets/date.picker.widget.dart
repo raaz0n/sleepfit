@@ -1,5 +1,6 @@
 import 'package:date_picker_timeline/date_picker_timeline.dart';
 import 'package:flutter/material.dart';
+import 'package:sleepfit/common/value.manager.dart';
 
 import '../../../common/color.manager.dart';
 
@@ -29,8 +30,8 @@ class _DatePickerWidgetState extends State<DatePickerWidget> {
         children: [
           DatePicker(
             DateTime.now(),
-            width: 65,
-            height: 92,
+            width: AppSize.s65,
+            height: AppSize.s95,
             controller: _controller,
             initialSelectedDate: DateTime.now(),
             selectionColor: ColorManager.titleText,
