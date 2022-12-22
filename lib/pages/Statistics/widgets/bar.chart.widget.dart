@@ -19,11 +19,13 @@ class BarChartSampleState extends State<BarChartSample> {
     return AspectRatio(
       aspectRatio: 5 / 3,
       child: Card(
-        elevation: 0,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
+        elevation: 1,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(AppSize.s18)),
         color: ColorManager.white,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
+          padding:
+              const EdgeInsets.symmetric(horizontal: AppSize.s8, vertical: 5),
           child: BarChart(
             mainBarData(),
             swapAnimationDuration: animDuration,

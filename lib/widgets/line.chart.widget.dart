@@ -124,13 +124,13 @@ class _LineChartWidgetState extends State<LineChartWidget> {
         verticalInterval: 1,
         getDrawingHorizontalLine: (value) {
           return FlLine(
-            color: const Color(0xffA5A6F6).withOpacity(0.01),
+            color: const Color(0xffA5A6F6).withOpacity(0.1),
             strokeWidth: 1,
           );
         },
         getDrawingVerticalLine: (value) {
           return FlLine(
-            color: const Color(0xffA5A6F6).withOpacity(0.01),
+            color: const Color(0xffA5A6F6).withOpacity(0.1),
             strokeWidth: 1,
           );
         },

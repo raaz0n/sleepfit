@@ -19,7 +19,7 @@ class BarChartSample2State extends State<BarChartSample2> {
     return AspectRatio(
       aspectRatio: 5 / 3,
       child: Card(
-        elevation: 0,
+        elevation: 1,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
         color: ColorManager.white,
         child: Padding(

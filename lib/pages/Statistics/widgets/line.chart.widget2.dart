@@ -2,6 +2,8 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:sleepfit/common/color.manager.dart';
 
+import '../../../common/value.manager.dart';
+
 class LineChartWidget2 extends StatefulWidget {
   const LineChartWidget2({super.key});
 
@@ -21,19 +23,13 @@ class _LineChartWidget2State extends State<LineChartWidget2> {
       children: [
         AspectRatio(
           aspectRatio: 1.70,
-          child: DecoratedBox(
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.all(
-                Radius.circular(18),
-              ),
-            ),
+          child: Card(
+            elevation: 1,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(AppSize.s18)),
+            color: ColorManager.white,
             child: Padding(
-              padding: const EdgeInsets.only(
-                right: 18,
-                left: 12,
-                top: 24,
-                bottom: 12,
-              ),
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
               child: LineChart(
                 mainData(),
               ),
@@ -147,7 +143,7 @@ class _LineChartWidget2State extends State<LineChartWidget2> {
         border: Border.all(color: const Color(0x0fffffff)),
       ),
       minX: 0,
-      maxX: 13,
+      maxX: 14,
       minY: 0,
       maxY: 6,
       lineBarsData: [
