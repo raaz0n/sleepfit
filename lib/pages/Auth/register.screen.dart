@@ -22,13 +22,14 @@ class RegisterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+      body: SingleChildScrollView(
+        physics: const NeverScrollableScrollPhysics(),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: AppSize.s50),
           child: Column(
             children: [
-              const SizedBox(
-                height: AppSize.s60,
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.09,
               ),
               AppLargeText(
                 text: AppStrings.createAccount,

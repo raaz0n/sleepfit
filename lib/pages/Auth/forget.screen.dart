@@ -17,42 +17,40 @@ class ForgetScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: AppSize.s50),
-          child: Column(
-            children: [
-              const SizedBox(
-                height: AppSize.s60,
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: AppSize.s50),
+        child: Column(
+          children: [
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.09,
+            ),
+            AppLargeText(
+              text: "Reset password",
+              color: ColorManager.titleText,
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.04,
+            ),
+            Form(
+              key: _formKey,
+              child: Column(
+                children: [
+                  TextFormFieldWidget(
+                    textEditingController: emailContoller,
+                    labelText: "Email",
+                    iconData: FontAwesomeIcons.envelope,
+                    textInputType: TextInputType.emailAddress,
+                    isEmail: true,
+                    errorMessage: AppStrings.emailRequired,
+                  ),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.06,
+                  ),
+                  const DefaultButton(text: AppStrings.sendResetMail)
+                ],
               ),
-              AppLargeText(
-                text: "Reset password",
-                color: ColorManager.titleText,
-              ),
-              const SizedBox(
-                height: AppSize.s40,
-              ),
-              Form(
-                key: _formKey,
-                child: Column(
-                  children: [
-                    TextFormFieldWidget(
-                      textEditingController: emailContoller,
-                      labelText: "Email",
-                      iconData: FontAwesomeIcons.envelope,
-                      textInputType: TextInputType.emailAddress,
-                      isEmail: true,
-                      errorMessage: AppStrings.emailRequired,
-                    ),
-                    const SizedBox(
-                      height: AppSize.s65,
-                    ),
-                    const DefaultButton(text: AppStrings.sendResetMail)
-                  ],
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

@@ -33,15 +33,17 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Padding(
+    return Padding(
       padding: const EdgeInsets.symmetric(horizontal: AppSize.s20),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.06,
+          ),
           const MusicWidget(),
-          const SizedBox(
-            height: 310,
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.3,
           ),
           Expanded(
             flex: 1,
@@ -57,6 +59,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: [
                       _selectedIndex != 2
                           ? Container(
+                              // width: MediaQuery.of(context).size.width * 0.6,
+                              // height: MediaQuery.of(context).size.height * 0.06,
                               width: AppSize.s210,
                               height: AppSize.s50,
                               decoration: BoxDecoration(
@@ -71,7 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     color: ColorManager.titleText),
                                 highlightedTextStyle: TextStyle(
                                     fontSize: 24, color: ColorManager.subTitle),
-                                spacing: 30,
+                                spacing: 20,
                                 itemHeight: 50,
                                 isForce2Digits: true,
                                 onTimeChange: (time) {
@@ -84,8 +88,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           : const SizedBox(
                               height: AppSize.s83,
                             ),
-                      const SizedBox(
-                        height: AppSize.s50,
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.05,
                       ),
                       _selectedIndex == 0
                           ? AppSmallText(
@@ -134,11 +138,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 )
             ],
           ),
-          const SizedBox(
-            height: AppSize.s45,
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.045,
           ),
         ],
       ),
-    ));
+    );
   }
 }

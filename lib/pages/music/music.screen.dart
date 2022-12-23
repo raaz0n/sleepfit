@@ -10,18 +10,16 @@ class MusicScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: AppSize.s20),
-          child: ListView(
-            children: const [
-              TopMusicWidget(),
-              SizedBox(
-                height: AppSize.s14,
-              ),
-              TabBarWidget(),
-            ],
-          ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: AppSize.s20),
+        child: ListView(
+          children: const [
+            TopMusicWidget(),
+            SizedBox(
+              height: AppSize.s14,
+            ),
+            TabBarWidget(),
+          ],
         ),
       ),
     );

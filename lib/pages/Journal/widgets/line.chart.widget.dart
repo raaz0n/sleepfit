@@ -53,6 +53,9 @@ class _LineChartWidgetState extends State<LineChartWidget> {
     );
     Widget text;
     switch (value.toInt()) {
+      case 1:
+        text = Text("5", style: style);
+        break;
       case 2:
         text = Text("6", style: style);
         break;
@@ -117,9 +120,6 @@ class _LineChartWidgetState extends State<LineChartWidget> {
   LineChartData mainData() {
     return LineChartData(
       gridData: FlGridData(
-        // drawHorizontalLine: false,
-        // show: true,
-        // drawVerticalLine: true,
         horizontalInterval: 1,
         verticalInterval: 1,
         getDrawingHorizontalLine: (value) {
@@ -171,12 +171,12 @@ class _LineChartWidgetState extends State<LineChartWidget> {
         LineChartBarData(
           spots: const [
             FlSpot(0, 6),
-            FlSpot(2.6, 2),
-            FlSpot(4.9, 5),
-            FlSpot(6.8, 3.1),
+            FlSpot(2, 2),
+            FlSpot(4, 5),
+            FlSpot(6, 3.1),
             FlSpot(8, 4),
-            FlSpot(9.5, 3),
-            FlSpot(11, 4),
+            FlSpot(10, 3),
+            FlSpot(11, 5),
           ],
           isCurved: true,
           color: ColorManager.titleText,

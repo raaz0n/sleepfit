@@ -1,7 +1,7 @@
 class AppStrings {
   static const String getStarted = "Get Started";
   static const String onBoardingTitle1 =
-      "Get notifications when you need to sleep";
+      "Get notifications \nwhen you need to sleep";
   static const String onBoardingTitle2 = "Your sleep makes you stronger";
   static const String onBoardingTitle3 = "Improve sleep quality";
 

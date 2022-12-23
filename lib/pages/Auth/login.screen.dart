@@ -25,146 +25,145 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: AppSize.s50),
-            child: Column(
-              children: [
-                const SizedBox(
-                  height: AppSize.s60,
-                ),
-                AppLargeText(
-                  text: "Login",
-                  color: ColorManager.titleText,
-                ),
-                const SizedBox(
-                  height: AppSize.s40,
-                ),
-                Form(
-                  key: _formKey,
-                  child: Column(
-                    children: [
-                      TextFormFieldWidget(
-                        textEditingController: emailContoller,
-                        labelText: "Email",
-                        iconData: FontAwesomeIcons.envelope,
-                        textInputType: TextInputType.emailAddress,
-                        isEmail: true,
-                        errorMessage: "Email Required",
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      TextFormFieldWidget(
-                        isPassWord: true,
-                        textEditingController: passwordController,
-                        labelText: "Password",
-                        iconData: FontAwesomeIcons.lock,
-                        textInputType: TextInputType.visiblePassword,
-                        isEmail: false,
-                        errorMessage: "Password Required",
-                      ),
-                      const SizedBox(
-                        height: AppSize.s12,
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => ForgetScreen(),
-                            ),
-                          );
-                        },
-                        child: Text(
-                          "Forget Your Password",
-                          style: TextStyle(
-                            color: ColorManager.titleText,
-                            decoration: TextDecoration.underline,
+        physics: const NeverScrollableScrollPhysics(),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: AppSize.s50),
+          child: Column(
+            children: [
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.09,
+              ),
+              AppLargeText(
+                text: "Login",
+                color: ColorManager.titleText,
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.04,
+              ),
+              Form(
+                key: _formKey,
+                child: Column(
+                  children: [
+                    TextFormFieldWidget(
+                      textEditingController: emailContoller,
+                      labelText: "Email",
+                      iconData: FontAwesomeIcons.envelope,
+                      textInputType: TextInputType.emailAddress,
+                      isEmail: true,
+                      errorMessage: AppStrings.emailRequired,
+                    ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.02,
+                    ),
+                    TextFormFieldWidget(
+                      isPassWord: true,
+                      textEditingController: passwordController,
+                      labelText: "Password",
+                      iconData: FontAwesomeIcons.lock,
+                      textInputType: TextInputType.visiblePassword,
+                      isEmail: false,
+                      errorMessage: "Password Required",
+                    ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.012,
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ForgetScreen(),
                           ),
+                        );
+                      },
+                      child: Text(
+                        "Forget Your Password",
+                        style: TextStyle(
+                          color: ColorManager.titleText,
+                          decoration: TextDecoration.underline,
                         ),
                       ),
-                      const SizedBox(
-                        height: AppSize.s40,
-                      ),
-                      DefaultButton(
+                    ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.04,
+                    ),
+                    DefaultButton(
                         text: "Login",
                         press: () {
-                          if (_formKey.currentState!.validate()) {
-                            Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const MainPageScreen(),
-                              ),
-                            );
-                          }
-                        },
-                      )
-                    ],
-                  ),
-                ),
-                const SizedBox(
-                  height: AppSize.s200,
-                ),
-                Row(
-                  children: [
-                    Expanded(
-                      child: Container(
-                        height: 0.3,
-                        color: ColorManager.subTitle,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10),
-                      child: AppSmallText(text: "Or"),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 0.3,
-                        color: ColorManager.subTitle,
-                      ),
-                    ),
+                          // if (_formKey.currentState!.validate()) {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const MainPageScreen(),
+                            ),
+                          );
+                        }
+                        // },
+                        )
                   ],
                 ),
-                const SizedBox(
-                  height: AppSize.s20,
-                ),
-                RoundedContrainer(
-                  text: AppStrings.googleSigning,
-                  iconData: FontAwesomeIcons.google,
-                ),
-                const SizedBox(
-                  height: AppSize.s14,
-                ),
-                RoundedContrainer(
-                  text: AppStrings.appleSigning,
-                  iconData: FontAwesomeIcons.apple,
-                ),
-                const SizedBox(
-                  height: AppSize.s12,
-                ),
-                RichText(
-                  text: TextSpan(
-                      text: 'Don\'t have an account yet?',
-                      style: const TextStyle(color: Colors.black, fontSize: 18),
-                      children: [
-                        TextSpan(
-                            text: ' Register',
-                            style: TextStyle(
-                                color: ColorManager.titleText, fontSize: 18),
-                            recognizer: TapGestureRecognizer()
-                              ..onTap = () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => RegisterScreen(),
-                                  ),
-                                );
-                              })
-                      ]),
-                ),
-              ],
-            ),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.25,
+              ),
+              Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      height: 0.3,
+                      color: ColorManager.subTitle,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: AppSmallText(text: "Or"),
+                  ),
+                  Expanded(
+                    child: Container(
+                      height: 0.3,
+                      color: ColorManager.subTitle,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: AppSize.s20,
+              ),
+              RoundedContrainer(
+                text: AppStrings.googleSigning,
+                iconData: FontAwesomeIcons.google,
+              ),
+              const SizedBox(
+                height: AppSize.s14,
+              ),
+              RoundedContrainer(
+                text: AppStrings.appleSigning,
+                iconData: FontAwesomeIcons.apple,
+              ),
+              const SizedBox(
+                height: AppSize.s12,
+              ),
+              RichText(
+                text: TextSpan(
+                    text: 'Don\'t have an account yet?',
+                    style: const TextStyle(color: Colors.black, fontSize: 18),
+                    children: [
+                      TextSpan(
+                          text: ' Register',
+                          style: TextStyle(
+                              color: ColorManager.titleText, fontSize: 18),
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => RegisterScreen(),
+                                ),
+                              );
+                            })
+                    ]),
+              ),
+            ],
           ),
         ),
       ),

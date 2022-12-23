@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:sleepfit/common/color.manager.dart';
@@ -213,21 +215,31 @@ class BarChartSampleState extends State<BarChartSample> {
   Widget leftTitleWidgets(double value, TitleMeta meta) {
     final style = TextStyle(
       color: ColorManager.subTitle,
-      fontSize: 12,
+      fontSize: 10,
     );
+    log(value.toString());
     String text;
     switch (value.toInt()) {
+      case 100:
+        text = '100';
+        break;
       case 80:
-        text = '80';
+        text = '80%';
         break;
       case 60:
-        text = '60';
+        text = '60%';
+        break;
+      case 50:
+        text = '50%';
         break;
       case 40:
-        text = '40';
+        text = '40%';
         break;
       case 20:
-        text = '20';
+        text = '20%';
+        break;
+      case 0:
+        text = '0%';
         break;
 
       default:

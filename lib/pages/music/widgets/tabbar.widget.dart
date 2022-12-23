@@ -44,10 +44,17 @@ class _TabBarWidgetState extends State<TabBarWidget>
             isScrollable: true,
             indicator: const BoxDecoration(),
             indicatorSize: TabBarIndicatorSize.label,
+            onTap: (value) {
+              setState(() {
+                selectedIndex = value;
+              });
+            },
             tabs: [
               Container(
                 decoration: BoxDecoration(
-                  color: ColorManager.titleText,
+                  color: selectedIndex == 0
+                      ? ColorManager.titleText
+                      : ColorManager.white,
                   border: Border.all(color: ColorManager.titleText),
                   borderRadius: BorderRadius.circular(20),
                 ),
@@ -64,6 +71,9 @@ class _TabBarWidgetState extends State<TabBarWidget>
               ),
               Container(
                 decoration: BoxDecoration(
+                  color: selectedIndex == 1
+                      ? ColorManager.titleText
+                      : ColorManager.white,
                   border: Border.all(color: ColorManager.titleText),
                   borderRadius: BorderRadius.circular(20),
                 ),
@@ -73,14 +83,16 @@ class _TabBarWidgetState extends State<TabBarWidget>
                         horizontal: AppPadding.p20, vertical: AppPadding.p12),
                     child: AppLargeText(
                       text: "Meditation Music",
-                      size: 16,
+                      size: FontSize.s16,
                     ),
                   ),
                 ),
               ),
               Container(
                 decoration: BoxDecoration(
-                  // color: ColorManager.titleText,
+                  color: selectedIndex == 2
+                      ? ColorManager.titleText
+                      : ColorManager.white,
                   border: Border.all(color: ColorManager.titleText),
                   borderRadius: BorderRadius.circular(20),
                 ),
@@ -90,7 +102,7 @@ class _TabBarWidgetState extends State<TabBarWidget>
                         horizontal: AppPadding.p20, vertical: AppPadding.p12),
                     child: AppLargeText(
                       text: "Spatial Audoo",
-                      size: 16,
+                      size: FontSize.s16,
                     ),
                   ),
                 ),
@@ -101,12 +113,15 @@ class _TabBarWidgetState extends State<TabBarWidget>
         const SizedBox(
           height: AppSize.s18,
         ),
-        AppLargeText(text: "Recently played"),
+        AppLargeText(
+          text: "Recently played",
+          size: FontSize.s20,
+        ),
         const SizedBox(
           height: AppSize.s18,
         ),
         SizedBox(
-          height: 260,
+          height: MediaQuery.of(context).size.height * 0.8,
           child: ListView.separated(
               physics: const ScrollPhysics(),
               separatorBuilder: (context, index) {
@@ -120,8 +135,8 @@ class _TabBarWidgetState extends State<TabBarWidget>
                 return Row(
                   children: [
                     Container(
-                      height: AppSize.s60,
-                      width: AppSize.s83,
+                      height: MediaQuery.of(context).size.height * 0.07,
+                      width: MediaQuery.of(context).size.width * 0.18,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(AppSize.s14),
                         image: const DecorationImage(
@@ -131,8 +146,8 @@ class _TabBarWidgetState extends State<TabBarWidget>
                             fit: BoxFit.cover),
                       ),
                     ),
-                    const SizedBox(
-                      width: 20,
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.03,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -142,9 +157,9 @@ class _TabBarWidgetState extends State<TabBarWidget>
                           color: ColorManager.titleText,
                           size: FontSize.s16,
                         ),
-                        const SizedBox(
-                          width: AppSize.s285,
-                          child: Text(
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.65,
+                          child: const Text(
                               "A single lead from a cello, performed on the deep sleep music."),
                         )
                       ],

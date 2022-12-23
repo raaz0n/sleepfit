@@ -211,6 +211,9 @@ class BarChartSample2State extends State<BarChartSample2> {
     );
     String text;
     switch (value.toInt()) {
+      case 100:
+        text = '100';
+        break;
       case 80:
         text = '80';
         break;
@@ -222,6 +225,9 @@ class BarChartSample2State extends State<BarChartSample2> {
         break;
       case 20:
         text = '20';
+        break;
+      case 0:
+        text = '0';
         break;
 
       default:

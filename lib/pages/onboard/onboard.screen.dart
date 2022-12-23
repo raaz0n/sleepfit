@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:sleepfit/common/color.manager.dart';
 import 'package:sleepfit/common/value.manager.dart';
-import 'package:sleepfit/pages/Auth/login.screen.dart';
 
 import '../../common/string.manager.dart';
 import '../../widgets/large.text.widget.dart';
 import '../../widgets/small.text.widget.dart';
+import '../Auth/login.screen.dart';
 import 'models/onboard.model.dart';
 
 class OnboardScreen extends StatefulWidget {
@@ -56,6 +56,46 @@ class _OnboardScreenState extends State<OnboardScreen> {
                   )),
             ),
           ),
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              for (var i = 0; i < onboardScreen.length; i++)
+                Padding(
+                  padding: const EdgeInsets.all(4),
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 480),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: _selectedIndex == i
+                          ? const Color(0xff5D5FEF)
+                          : const Color(0xffECE8FD),
+                    ),
+                    width: AppSize.s8,
+                    height: AppSize.s8,
+                  ),
+                )
+            ],
+          ),
+          const SizedBox(
+            height: AppSize.s45,
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => LoginScreen(),
+                ),
+              );
+            },
+            child: AppSmallText(
+              text: AppStrings.skip,
+              color: ColorManager.subTitle,
+            ),
+          ),
+          const SizedBox(
+            height: AppSize.s45,
+          ),
         ],
       ),
     );
@@ -85,8 +125,8 @@ class OnboardContent extends StatelessWidget {
           alignment: AlignmentDirectional.topStart,
         ),
         Positioned(
-          top: AppSize.s200,
-          left: AppSize.s50,
+          top: MediaQuery.of(context).size.height * 0.2,
+          left: AppSize.s30,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -100,7 +140,7 @@ class OnboardContent extends StatelessWidget {
                 ),
               ]),
               SizedBox(
-                width: AppSize.s300,
+                width: MediaQuery.of(context).size.width * 0.9,
                 child: AppLargeText(
                   text: title,
                   color: ColorManager.titleText,
@@ -110,52 +150,12 @@ class OnboardContent extends StatelessWidget {
                 height: AppSize.s12,
               ),
               SizedBox(
-                width: AppSize.s300,
+                width: MediaQuery.of(context).size.width * 0.8,
                 child: AppSmallText(
                   text: description,
                   color: ColorManager.subTitle,
                 ),
               ),
-              const SizedBox(
-                height: AppSize.s28,
-              ),
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  for (var i = 0; i < onboardScreen.length; i++)
-                    Padding(
-                      padding: const EdgeInsets.all(4),
-                      child: AnimatedContainer(
-                        duration: const Duration(milliseconds: 480),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          color: index == i
-                              ? const Color(0xff5D5FEF)
-                              : const Color(0xffECE8FD),
-                        ),
-                        width: AppSize.s8,
-                        height: AppSize.s8,
-                      ),
-                    )
-                ],
-              ),
-              const SizedBox(
-                height: AppSize.s45,
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => LoginScreen(),
-                    ),
-                  );
-                },
-                child: AppSmallText(
-                  text: AppStrings.skip,
-                  color: ColorManager.subTitle,
-                ),
-              )
             ],
           ),
         ),
