@@ -43,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           const MusicWidget(),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.3,
+            height: MediaQuery.of(context).size.height * 0.20,
           ),
           Expanded(
             flex: 1,
@@ -58,32 +58,47 @@ class _HomeScreenState extends State<HomeScreen> {
               itemBuilder: ((context, index) => Column(
                     children: [
                       _selectedIndex != 2
-                          ? Container(
-                              // width: MediaQuery.of(context).size.width * 0.6,
-                              // height: MediaQuery.of(context).size.height * 0.06,
-                              width: AppSize.s210,
-                              height: AppSize.s50,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  border: Border.all(
-                                      color: const Color(0xffDDDADA))),
-                              child: TimePickerSpinner(
-                                is24HourMode: false,
-                                normalTextStyle: TextStyle(
+                          ? Stack(
+                              children: [
+                                TimePickerSpinner(
+                                  alignment: Alignment.center,
+                                  is24HourMode: false,
+                                  normalTextStyle: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 24,
-                                    color: ColorManager.titleText),
-                                highlightedTextStyle: TextStyle(
-                                    fontSize: 24, color: ColorManager.subTitle),
-                                spacing: 20,
-                                itemHeight: 50,
-                                isForce2Digits: true,
-                                onTimeChange: (time) {
-                                  setState(() {
-                                    _dateTime = time;
-                                  });
-                                },
-                              ),
+                                    color:
+                                        ColorManager.subTitle.withOpacity(0.2),
+                                  ),
+                                  highlightedTextStyle: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 24,
+                                      color: ColorManager.titleText),
+                                  spacing: 20,
+                                  itemHeight: 50,
+                                  isForce2Digits: true,
+                                  onTimeChange: (time) {
+                                    setState(() {
+                                      _dateTime = time;
+                                    });
+                                  },
+                                ),
+                                Center(
+                                  child: Container(
+                                    margin: EdgeInsets.only(
+                                        top:
+                                            MediaQuery.of(context).size.height *
+                                                0.055),
+                                    width: AppSize.s210,
+                                    height: AppSize.s50,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                      border: Border.all(
+                                        color: const Color(0xffDDDADA),
+                                      ),
+                                    ),
+                                  ),
+                                )
+                              ],
                             )
                           : const SizedBox(
                               height: AppSize.s83,
