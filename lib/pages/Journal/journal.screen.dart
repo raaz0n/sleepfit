@@ -29,7 +29,7 @@ class JournalScreen extends StatelessWidget {
         ),
       ),
       body: SingleChildScrollView(
-        physics: const NeverScrollableScrollPhysics(),
+        // physics: const NeverScrollableScrollPhysics(),
         child: SafeArea(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: AppPadding.p20),

@@ -55,6 +55,16 @@ class TextFormFieldWidget extends StatelessWidget {
             color: Colors.blue,
           ),
         ),
+        suffixIcon: isPassWord
+            ? const Padding(
+                padding: EdgeInsets.all(10.0),
+                child: FaIcon(
+                  FontAwesomeIcons.eyeSlash,
+                  color: Colors.grey,
+                  size: AppSize.s20,
+                ),
+              )
+            : const SizedBox.shrink(),
       ),
     );
   }

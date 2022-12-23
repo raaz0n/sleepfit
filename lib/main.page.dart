@@ -132,10 +132,10 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         });
       },
       child: Padding(
-        padding: const EdgeInsets.only(
+        padding: EdgeInsets.only(
           right: 10,
           left: 10,
-          bottom: 20,
+          bottom: MediaQuery.of(context).size.height * 0.02,
         ),
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -149,7 +149,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
               },
               icon: FaIcon(
                 icon,
-                size: 20,
+                size: 18,
               ),
               color: index == _selectedIndex
                   ? ColorManager.titleText

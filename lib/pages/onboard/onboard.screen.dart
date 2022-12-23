@@ -121,11 +121,13 @@ class OnboardContent extends StatelessWidget {
       children: [
         Image.asset(
           backImage,
-          fit: BoxFit.cover,
+          fit: BoxFit.fill,
           alignment: AlignmentDirectional.topStart,
+          height: MediaQuery.of(context).size.height * 0.50,
+          width: double.infinity,
         ),
         Positioned(
-          top: MediaQuery.of(context).size.height * 0.2,
+          top: MediaQuery.of(context).size.height * 0.20,
           left: AppSize.s30,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -136,6 +138,8 @@ class OnboardContent extends StatelessWidget {
                   child: Image.asset(
                     image,
                     fit: BoxFit.fill,
+                    height: MediaQuery.of(context).size.height * 0.45,
+                    width: MediaQuery.of(context).size.width * 0.8,
                   ),
                 ),
               ]),

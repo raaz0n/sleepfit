@@ -104,7 +104,7 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.25,
+                height: MediaQuery.of(context).size.height * 0.22,
               ),
               Row(
                 children: [
@@ -126,22 +126,22 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(
-                height: AppSize.s20,
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
               ),
               RoundedContrainer(
                 text: AppStrings.googleSigning,
                 iconData: FontAwesomeIcons.google,
               ),
-              const SizedBox(
-                height: AppSize.s14,
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.014,
               ),
               RoundedContrainer(
                 text: AppStrings.appleSigning,
                 iconData: FontAwesomeIcons.apple,
               ),
-              const SizedBox(
-                height: AppSize.s12,
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.012,
               ),
               RichText(
                 text: TextSpan(

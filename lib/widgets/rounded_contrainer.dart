@@ -20,8 +20,7 @@ class RoundedContrainer extends StatelessWidget {
     return InkWell(
       onTap: press,
       child: Container(
-        width: 315,
-        height: 56,
+        height: MediaQuery.of(context).size.height * 0.06,
         decoration: BoxDecoration(
             border: Border.all(color: ColorManager.subTitle.withOpacity(0.4)
                 // width: 5,

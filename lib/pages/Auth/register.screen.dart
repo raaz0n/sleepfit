@@ -69,8 +69,7 @@ class RegisterScreen extends StatelessWidget {
                       labelText: "Password",
                       iconData: FontAwesomeIcons.lock,
                       textInputType: TextInputType.visiblePassword,
-                      isEmail: true,
-                      errorMessage: "errorMessage",
+                      errorMessage: "Password required",
                     ),
                     const SizedBox(
                       height: 20,
@@ -81,12 +80,24 @@ class RegisterScreen extends StatelessWidget {
                       labelText: "Retype password",
                       iconData: FontAwesomeIcons.lock,
                       textInputType: TextInputType.visiblePassword,
-                      errorMessage: "errorMessage",
+                      errorMessage: "Password Required",
                     ),
                     const SizedBox(
                       height: AppSize.s65,
                     ),
-                    const DefaultButton(text: "Register")
+                    DefaultButton(
+                      text: "Register",
+                      press: () {
+                        if (_formKey.currentState!.validate()) {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => LoginScreen(),
+                            ),
+                          );
+                        }
+                      },
+                    )
                   ],
                 ),
               ),

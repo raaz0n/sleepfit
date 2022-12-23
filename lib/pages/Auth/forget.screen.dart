@@ -7,6 +7,8 @@ import 'package:sleepfit/widgets/default.button.dart';
 import 'package:sleepfit/widgets/large.text.widget.dart';
 import 'package:sleepfit/widgets/textformfield.widget.dart';
 
+import 'login.screen.dart';
+
 class ForgetScreen extends StatelessWidget {
   ForgetScreen({super.key});
 
@@ -46,7 +48,19 @@ class ForgetScreen extends StatelessWidget {
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.06,
                   ),
-                  const DefaultButton(text: AppStrings.sendResetMail)
+                  DefaultButton(
+                    text: AppStrings.sendResetMail,
+                    press: () {
+                      if (_formKey.currentState!.validate()) {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => LoginScreen(),
+                          ),
+                        );
+                      }
+                    },
+                  )
                 ],
               ),
             ),
