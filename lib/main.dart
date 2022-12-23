@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'SleepFit',
       //system theme
-      themeMode: ThemeMode.system,
+      // themeMode: ThemeMode.system,
       theme: ThemeData(
           primarySwatch: Colors.blue,
           fontFamily: "Poppins",
