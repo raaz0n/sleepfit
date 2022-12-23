@@ -3,8 +3,9 @@ import 'package:flutter_svg/svg.dart';
 import 'package:sleepfit/common/color.manager.dart';
 import 'package:sleepfit/common/font.manager.dart';
 import 'package:sleepfit/common/string.manager.dart';
-import 'package:sleepfit/pages/onboard/onboard.screen.dart';
 import 'package:sleepfit/widgets/default.button.dart';
+
+import '../../common/routes.manager.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -49,12 +50,7 @@ class SplashScreen extends StatelessWidget {
             DefaultButton(
               text: AppStrings.getStarted,
               press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const OnboardScreen(),
-                  ),
-                );
+                Navigator.pushNamed(context, Routes.onBoardingRoute);
               },
             ),
           ],

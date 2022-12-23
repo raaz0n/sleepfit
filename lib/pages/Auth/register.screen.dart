@@ -4,7 +4,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sleepfit/common/color.manager.dart';
 import 'package:sleepfit/common/string.manager.dart';
 import 'package:sleepfit/common/value.manager.dart';
-import 'package:sleepfit/pages/Auth/login.screen.dart';
 import 'package:sleepfit/widgets/default.button.dart';
 import 'package:sleepfit/widgets/large.text.widget.dart';
 import 'package:sleepfit/widgets/textformfield.widget.dart';
@@ -89,12 +88,7 @@ class RegisterScreen extends StatelessWidget {
                       text: "Register",
                       press: () {
                         if (_formKey.currentState!.validate()) {
-                          Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => LoginScreen(),
-                            ),
-                          );
+                          Navigator.pop(context);
                         }
                       },
                     )
@@ -115,12 +109,7 @@ class RegisterScreen extends StatelessWidget {
                           color: ColorManager.titleText, fontSize: 18),
                       recognizer: TapGestureRecognizer()
                         ..onTap = () {
-                          Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => LoginScreen(),
-                            ),
-                          );
+                          Navigator.pop(context);
                         },
                     )
                   ],

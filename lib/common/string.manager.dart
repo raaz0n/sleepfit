@@ -1,4 +1,6 @@
 class AppStrings {
+  static const String noRouteFound = "No Route Found";
+
   static const String getStarted = "Get Started";
   static const String onBoardingTitle1 =
       "Get notifications \nwhen you need to sleep";

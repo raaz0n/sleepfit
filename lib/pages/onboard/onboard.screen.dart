@@ -2,20 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:sleepfit/common/color.manager.dart';
 import 'package:sleepfit/common/value.manager.dart';
 
+import '../../common/routes.manager.dart';
 import '../../common/string.manager.dart';
 import '../../widgets/large.text.widget.dart';
 import '../../widgets/small.text.widget.dart';
-import '../Auth/login.screen.dart';
 import 'models/onboard.model.dart';
 
-class OnboardScreen extends StatefulWidget {
-  const OnboardScreen({Key? key}) : super(key: key);
+class OnBoardingScreen extends StatefulWidget {
+  const OnBoardingScreen({Key? key}) : super(key: key);
 
   @override
-  State<OnboardScreen> createState() => _OnboardScreenState();
+  State<OnBoardingScreen> createState() => _OnBoardingScreenState();
 }
 
-class _OnboardScreenState extends State<OnboardScreen> {
+class _OnBoardingScreenState extends State<OnBoardingScreen> {
   late PageController _pageController;
   int _selectedIndex = 0;
 
@@ -81,12 +81,7 @@ class _OnboardScreenState extends State<OnboardScreen> {
           ),
           GestureDetector(
             onTap: () {
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => LoginScreen(),
-                ),
-              );
+              Navigator.pushNamed(context, Routes.loginRoute);
             },
             child: AppSmallText(
               text: AppStrings.skip,

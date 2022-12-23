@@ -9,8 +9,8 @@ import 'package:sleepfit/widgets/textformfield.widget.dart';
 
 import 'login.screen.dart';
 
-class ForgetScreen extends StatelessWidget {
-  ForgetScreen({super.key});
+class ResetPasswordScreen extends StatelessWidget {
+  ResetPasswordScreen({super.key});
 
   TextEditingController emailContoller = TextEditingController();
 

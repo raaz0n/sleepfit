@@ -4,14 +4,13 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sleepfit/common/color.manager.dart';
 import 'package:sleepfit/common/string.manager.dart';
 import 'package:sleepfit/common/value.manager.dart';
-import 'package:sleepfit/main.page.dart';
-import 'package:sleepfit/pages/Auth/forget.screen.dart';
-import 'package:sleepfit/pages/Auth/register.screen.dart';
 import 'package:sleepfit/widgets/default.button.dart';
 import 'package:sleepfit/widgets/large.text.widget.dart';
 import 'package:sleepfit/widgets/rounded_contrainer.dart';
 import 'package:sleepfit/widgets/small.text.widget.dart';
 import 'package:sleepfit/widgets/textformfield.widget.dart';
+
+import '../../common/routes.manager.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
@@ -69,12 +68,7 @@ class LoginScreen extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ForgetScreen(),
-                          ),
-                        );
+                        Navigator.pushNamed(context, Routes.registerRoute);
                       },
                       child: Text(
                         "Forget Your Password",
@@ -91,12 +85,7 @@ class LoginScreen extends StatelessWidget {
                         text: "Login",
                         press: () {
                           // if (_formKey.currentState!.validate()) {
-                          Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const MainPageScreen(),
-                            ),
-                          );
+                          Navigator.pushNamed(context, Routes.mainRoute);
                         }
                         // },
                         )
@@ -154,12 +143,8 @@ class LoginScreen extends StatelessWidget {
                               color: ColorManager.titleText, fontSize: 18),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => RegisterScreen(),
-                                ),
-                              );
+                              Navigator.pushNamed(
+                                  context, Routes.registerRoute);
                             })
                     ]),
               ),

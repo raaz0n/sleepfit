@@ -4,9 +4,9 @@ import 'package:sleepfit/common/value.manager.dart';
 
 import '../../../common/color.manager.dart';
 import '../../../common/font.manager.dart';
+import '../../../common/routes.manager.dart';
 import '../../../widgets/large.text.widget.dart';
 import '../../../widgets/small.text.widget.dart';
-import '../../music/music.screen.dart';
 
 class MusicWidget extends StatelessWidget {
   const MusicWidget({super.key});
@@ -68,12 +68,7 @@ class MusicWidget extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const MusicScreen(),
-                    ),
-                  );
+                  Navigator.pushNamed(context, Routes.musicRoute);
                 },
                 child: Hero(
                   tag: "play",

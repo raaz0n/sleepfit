@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sleepfit/common/color.manager.dart';
-import 'package:sleepfit/pages/Splash/splash.screen.dart';
+
+import 'common/routes.manager.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
           fontFamily: "Poppins",
           scaffoldBackgroundColor: ColorManager.white),
-      home: const SplashScreen(),
+      onGenerateRoute: RouteGenerator.getRoute,
+      initialRoute: Routes.splashRoute,
     );
   }
 }
