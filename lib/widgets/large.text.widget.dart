@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sleepfit/common/font.manager.dart';
+
+import '../common/font.manager.dart';
 
 class AppLargeText extends StatelessWidget {
   double size;

@@ -5,8 +5,10 @@ import 'package:sleepfit/common/value.manager.dart';
 import '../../../common/color.manager.dart';
 import '../../../common/font.manager.dart';
 import '../../../common/routes.manager.dart';
+import '../../../common/string.manager.dart';
 import '../../../widgets/large.text.widget.dart';
 import '../../../widgets/small.text.widget.dart';
+import '../../Journal/model/feature.model.dart';
 
 class MusicWidget extends StatelessWidget {
   const MusicWidget({super.key});
@@ -68,7 +70,15 @@ class MusicWidget extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  Navigator.pushNamed(context, Routes.musicRoute);
+                  Navigator.pushNamed(
+                    context,
+                    Routes.musicRoute,
+                    arguments: FeatureItemModel(
+                      icon: Icons.bedtime,
+                      title: AppStrings.wentToBed,
+                      subTitle: "4:02 AM",
+                    ),
+                  );
                 },
                 child: Hero(
                   tag: "play",

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:sleepfit/common/string.manager.dart';
-import 'package:sleepfit/common/value.manager.dart';
-import 'package:sleepfit/pages/Journal/widgets/date.picker.widget.dart';
-import 'package:sleepfit/pages/Journal/widgets/grid.item.widget.dart';
-import 'package:sleepfit/pages/Journal/widgets/line.chart.widget.dart';
 
 import '../../common/color.manager.dart';
 import '../../common/font.manager.dart';
+import '../../common/string.manager.dart';
+import '../../common/value.manager.dart';
+import 'widgets/date.picker.widget.dart';
+import 'widgets/grid.item.widget.dart';
+import 'widgets/line.chart.widget.dart';
 import 'widgets/share.widget.dart';
 
 class JournalScreen extends StatelessWidget {

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:sleepfit/common/color.manager.dart';
-import 'package:sleepfit/common/font.manager.dart';
-import 'package:sleepfit/pages/Journal/journal.screen.dart';
-import 'package:sleepfit/pages/Profile/profile.screen.dart';
-import 'package:sleepfit/pages/Statistics/statistics.screen.dart';
-import 'package:sleepfit/widgets/small.text.widget.dart';
 
+import 'common/color.manager.dart';
+import 'common/font.manager.dart';
 import 'pages/Home/home.screen.dart';
+import 'pages/Journal/journal.screen.dart';
+import 'pages/Profile/profile.screen.dart';
+import 'pages/Statistics/statistics.screen.dart';
+import 'widgets/small.text.widget.dart';
 
 class MainPageScreen extends StatefulWidget {
   const MainPageScreen({Key? key}) : super(key: key);

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sleepfit/common/string.manager.dart';
+
+import '../../../common/string.manager.dart';
 
 class FeatureItemModel {
   String title;

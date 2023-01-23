@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sleepfit/widgets/large.text.widget.dart';
 
 import '../../common/color.manager.dart';
 import '../../common/font.manager.dart';
 import '../../common/string.manager.dart';
+import '../../widgets/large.text.widget.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -19,9 +19,10 @@ class ProfileScreen extends StatelessWidget {
         title: Text(
           AppStrings.profile,
           style: TextStyle(
-              fontSize: FontSize.s24,
-              color: ColorManager.subTitle,
-              fontWeight: FontWeight.bold),
+            fontSize: FontSize.s24,
+            color: ColorManager.subTitle,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
       body: SafeArea(

@@ -2,11 +2,12 @@ import 'dart:developer';
 
 import 'package:flutter/cupertino.dart';
 import 'package:intl/intl.dart';
-import 'package:sleepfit/common/color.manager.dart';
-import 'package:sleepfit/common/value.manager.dart';
-import 'package:sleepfit/pages/Home/widget/music.widget.dart';
-import 'package:sleepfit/widgets/default.button.dart';
-import 'package:sleepfit/widgets/small.text.widget.dart';
+
+import '../../common/color.manager.dart';
+import '../../common/value.manager.dart';
+import '../../widgets/default.button.dart';
+import '../../widgets/small.text.widget.dart';
+import 'widget/music.widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

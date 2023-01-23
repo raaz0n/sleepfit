@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:sleepfit/main.page.dart';
-import 'package:sleepfit/pages/Auth/login.screen.dart';
-import 'package:sleepfit/pages/music/music.screen.dart';
 
+import '../main.page.dart';
 import '../pages/Auth/forget.screen.dart';
+import '../pages/Auth/login.screen.dart';
 import '../pages/Auth/register.screen.dart';
+import '../pages/Journal/model/feature.model.dart';
 import '../pages/Splash/splash.screen.dart';
+import '../pages/music/music.screen.dart';
 import '../pages/onboard/onboard.screen.dart';
 import 'string.manager.dart';
 
@@ -21,21 +22,38 @@ class Routes {
 
 class RouteGenerator {
   static Route<dynamic> getRoute(RouteSettings routeSettings) {
+    final arg = routeSettings.arguments;
     switch (routeSettings.name) {
       case Routes.splashRoute:
-        return MaterialPageRoute(builder: (_) => const SplashScreen());
+        return MaterialPageRoute(
+          builder: (_) => const SplashScreen(),
+        );
       case Routes.onBoardingRoute:
-        return MaterialPageRoute(builder: (_) => const OnBoardingScreen());
+        return MaterialPageRoute(
+          builder: (_) => const OnBoardingScreen(),
+        );
       case Routes.mainRoute:
-        return MaterialPageRoute(builder: (_) => const MainPageScreen());
+        return MaterialPageRoute(
+          builder: (_) => const MainPageScreen(),
+        );
       case Routes.loginRoute:
-        return MaterialPageRoute(builder: (_) => LoginScreen());
+        return MaterialPageRoute(
+          builder: (_) => LoginScreen(),
+        );
       case Routes.registerRoute:
-        return MaterialPageRoute(builder: (_) => RegisterScreen());
+        return MaterialPageRoute(
+          builder: (_) => RegisterScreen(),
+        );
       case Routes.resetPasswordRoute:
-        return MaterialPageRoute(builder: (_) => ResetPasswordScreen());
+        return MaterialPageRoute(
+          builder: (_) => ResetPasswordScreen(),
+        );
       case Routes.musicRoute:
-        return MaterialPageRoute(builder: (_) => const MusicScreen());
+        return MaterialPageRoute(
+          builder: (_) => MusicScreen(
+            data: arg as FeatureItemModel,
+          ),
+        );
       default:
         return unDefinedRoute();
     }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sleepfit/common/color.manager.dart';
 
+import 'common/color.manager.dart';
 import 'common/routes.manager.dart';
 
 void main() {

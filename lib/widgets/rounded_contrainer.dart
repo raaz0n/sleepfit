@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:sleepfit/common/color.manager.dart';
-import 'package:sleepfit/common/value.manager.dart';
-import 'package:sleepfit/widgets/large.text.widget.dart';
+
+import '../common/color.manager.dart';
+import '../common/value.manager.dart';
+import 'large.text.widget.dart';
 
 class RoundedContrainer extends StatelessWidget {
   RoundedContrainer({

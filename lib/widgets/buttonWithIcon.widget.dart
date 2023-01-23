@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sleepfit/common/color.manager.dart';
-import 'package:sleepfit/common/font.manager.dart';
+
+import '../common/color.manager.dart';
+import '../common/font.manager.dart';
 
 class ButtonWithIcons extends StatelessWidget {
   const ButtonWithIcons(

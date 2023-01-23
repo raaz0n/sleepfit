@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:sleepfit/common/color.manager.dart';
-import 'package:sleepfit/common/font.manager.dart';
-import 'package:sleepfit/common/string.manager.dart';
-import 'package:sleepfit/widgets/default.button.dart';
 
+import '../../common/color.manager.dart';
+import '../../common/font.manager.dart';
 import '../../common/routes.manager.dart';
+import '../../common/string.manager.dart';
+import '../../widgets/default.button.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});

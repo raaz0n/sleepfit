@@ -1,16 +1,16 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:sleepfit/common/color.manager.dart';
-import 'package:sleepfit/common/string.manager.dart';
-import 'package:sleepfit/common/value.manager.dart';
-import 'package:sleepfit/widgets/default.button.dart';
-import 'package:sleepfit/widgets/large.text.widget.dart';
-import 'package:sleepfit/widgets/rounded_contrainer.dart';
-import 'package:sleepfit/widgets/small.text.widget.dart';
-import 'package:sleepfit/widgets/textformfield.widget.dart';
 
+import '../../common/color.manager.dart';
 import '../../common/routes.manager.dart';
+import '../../common/string.manager.dart';
+import '../../common/value.manager.dart';
+import '../../widgets/default.button.dart';
+import '../../widgets/large.text.widget.dart';
+import '../../widgets/rounded_contrainer.dart';
+import '../../widgets/small.text.widget.dart';
+import '../../widgets/textformfield.widget.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});

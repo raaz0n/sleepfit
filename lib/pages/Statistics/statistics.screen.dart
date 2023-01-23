@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:sleepfit/common/color.manager.dart';
-import 'package:sleepfit/common/font.manager.dart';
-import 'package:sleepfit/common/string.manager.dart';
-import 'package:sleepfit/pages/Statistics/widgets/heading.widget.dart';
-import 'package:sleepfit/pages/Statistics/widgets/topTabBar.widget.dart';
 
+import '../../common/color.manager.dart';
+import '../../common/font.manager.dart';
+import '../../common/string.manager.dart';
 import '../../common/value.manager.dart';
 import 'widgets/bar.chart.widget.dart';
 import 'widgets/bar.chart.widget2.dart';
+import 'widgets/heading.widget.dart';
 import 'widgets/line.chart.widget2.dart';
+import 'widgets/topTabBar.widget.dart';
 
 class StatisticsScreen extends StatelessWidget {
   const StatisticsScreen({super.key});

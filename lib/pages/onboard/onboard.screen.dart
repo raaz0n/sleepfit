@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sleepfit/common/color.manager.dart';
-import 'package:sleepfit/common/value.manager.dart';
 
+import '../../common/color.manager.dart';
 import '../../common/routes.manager.dart';
 import '../../common/string.manager.dart';
+import '../../common/value.manager.dart';
 import '../../widgets/large.text.widget.dart';
 import '../../widgets/small.text.widget.dart';
 import 'models/onboard.model.dart';
