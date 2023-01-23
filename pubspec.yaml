@@ -37,7 +37,9 @@ dependencies:
   flutter_svg: ^1.1.6
   flutter_time_picker_spinner: ^2.0.0
   font_awesome_flutter: ^10.3.0
+  intl: ^0.18.0
   percent_indicator: ^4.2.2
+  tutorial_coach_mark: ^1.2.4
 
 dev_dependencies:
   flutter_lints: ^2.0.0

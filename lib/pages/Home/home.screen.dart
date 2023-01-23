@@ -1,5 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_time_picker_spinner/flutter_time_picker_spinner.dart';
+import 'dart:developer';
+
+import 'package:flutter/cupertino.dart';
+import 'package:intl/intl.dart';
 import 'package:sleepfit/common/color.manager.dart';
 import 'package:sleepfit/common/value.manager.dart';
 import 'package:sleepfit/pages/Home/widget/music.widget.dart';
@@ -14,7 +16,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  DateTime _dateTime = DateTime.now();
+  DateTime dateTime = DateTime.now();
 
   late PageController _pageController;
   int _selectedIndex = 0;
@@ -58,47 +60,18 @@ class _HomeScreenState extends State<HomeScreen> {
               itemBuilder: ((context, index) => Column(
                     children: [
                       _selectedIndex != 2
-                          ? Stack(
-                              children: [
-                                TimePickerSpinner(
-                                  alignment: Alignment.center,
-                                  is24HourMode: false,
-                                  normalTextStyle: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 24,
-                                    color:
-                                        ColorManager.subTitle.withOpacity(0.2),
-                                  ),
-                                  highlightedTextStyle: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 24,
-                                      color: ColorManager.titleText),
-                                  spacing: 20,
-                                  itemHeight: 50,
-                                  isForce2Digits: true,
-                                  onTimeChange: (time) {
-                                    setState(() {
-                                      _dateTime = time;
-                                    });
-                                  },
+                          ? Center(
+                              child: SizedBox(
+                                height: AppSize.s100,
+                                width: AppSize.s200,
+                                child: CupertinoDatePicker(
+                                  initialDateTime: dateTime,
+                                  mode: CupertinoDatePickerMode.time,
+                                  // use24hFormat: true,
+                                  onDateTimeChanged: (time) =>
+                                      setState(() => dateTime = time),
                                 ),
-                                Center(
-                                  child: Container(
-                                    margin: EdgeInsets.only(
-                                        top:
-                                            MediaQuery.of(context).size.height *
-                                                0.055),
-                                    width: AppSize.s210,
-                                    height: AppSize.s50,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20),
-                                      border: Border.all(
-                                        color: const Color(0xffDDDADA),
-                                      ),
-                                    ),
-                                  ),
-                                )
-                              ],
+                              ),
                             )
                           : const SizedBox(
                               height: AppSize.s83,
@@ -124,7 +97,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       const SizedBox(
                         height: AppSize.s14,
                       ),
-                      const DefaultButton(
+                      DefaultButton(
+                        press: () {
+                          final value = DateFormat('HH:mm').format(dateTime);
+                          log(value.toString());
+                        },
                         text: "Start",
                         height: AppSize.s60,
                         width: AppSize.s165,
