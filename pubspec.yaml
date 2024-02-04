@@ -31,19 +31,19 @@ environment:
 dependencies:
   cupertino_icons: ^1.0.2
   date_picker_timeline: ^1.2.3
-  fl_chart: ^0.55.2
+  fl_chart: ^0.66.1
   flutter:
     sdk: flutter
  
-  flutter_svg: ^1.1.6
+  flutter_svg: ^2.0.9
   font_awesome_flutter: ^10.3.0
-  intl: ^0.17.0
+  intl: ^0.18.1
   percent_indicator: ^4.2.2
   tutorial_coach_mark: ^1.2.4
 
 dev_dependencies:
-  flutter_launcher_icons: ^0.11.0
-  flutter_lints: ^2.0.0
+  flutter_launcher_icons: ^0.13.1
+  flutter_lints: ^3.0.1
   flutter_test:
     sdk: flutter
 
