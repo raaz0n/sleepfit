@@ -46,3 +46,61 @@ jobs:
 
 # push to master, main, develop
 # pull request on main master
+
+
+
+
+# name: CI
+
+# on:
+#   push:
+#     branches:
+#       - main
+#   pull_request:
+#     branches:
+#       - main
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
+
+#       - name: Set up Flutter
+#         uses: subosito/flutter-action@v2
+#         with:
+#           flutter-version: stable
+
+#       - name: Install dependencies
+#         run: flutter pub get
+
+#       - name: Run tests
+#         run: flutter test
+
+#       - name: Build app (dev flavor)
+#         run: flutter build apk --flavor dev
+
+#       - name: Archive artifacts
+#         uses: actions/upload-artifact@v2
+#         with:
+#           name: app-release
+#           path: build/app/outputs/flutter-apk/app-dev-release.apk
+
+#       - name: Upload to TestFlight
+#         uses: apple-actions/upload-app@v1
+#         with:
+#           app-path: build/ios/archive/Runner.xcarchive/Products/Applications/Runner.app
+#           app-identifier: ${{ secrets.APP_IDENTIFIER }}
+#           apple-id: ${{ secrets.APPLE_ID }}
+#           apple-password: ${{ secrets.APPLE_PASSWORD }}
+
+#       - name: Upload to Google Play Store Internal Testing
+#         uses: r0adkll/upload-google-play@v1
+#         with:
+#           service-account-json: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+#           package-name: com.example.app
+#           track: internal
+#           release-status: draft
+#           apk: build/app/outputs/flutter-apk/app-dev-release.apk
