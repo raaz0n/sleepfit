@@ -1,4 +1,4 @@
-# sleepfit
+# Sleepfit
 
 A new Flutter project.
 
