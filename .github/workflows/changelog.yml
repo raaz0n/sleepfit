@@ -21,4 +21,4 @@ jobs:
           # that match the specified pattern (regular expression)
           branch: main
           # (Required) GitHub token for creating GitHub Releases.
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.TOKEN }}
